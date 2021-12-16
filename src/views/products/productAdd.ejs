@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD-->
+<%- include("../partials/head.ejs") %> 
+<!-- FIN HEAD-->
+
+
+<body>
+
+
+    <!-- HEADER + NAVBAR + LOGO -->
+    <%- include("../partials/header.ejs") %> 
+    <!-- FIN  HEADER + NAVBAR + LOGO -->
+
+
+
+    <!-- MAIN (SLIDER, PRODUCTOS DESTACADOS, MAPS) -->
+    <main class="main-addProduct">
+
+        <section class="main-addProduct-container">
+
+            <h2 class="main__title-addProduct">Ingrese los nuevos productos</h2>
+
+            <form action="#" method="post">
+                
+                
+                <div class="main__container-rol rol">
+                    <p>Categoria</p>
+                    <div class="main__bluebox"><img src="images/registro-assets/id.svg" alt="rol-registro"
+                            id="main__register-rol"></div>
+                    <div class="main__register">
+                        <select name="registroRol" id="registroRol">
+                            <option value="Procesadores" selected>Procesadores</option>
+                            <option value="Placas de video">Placas de video</option>
+                        </select>
+                    </div>
+                </div>
+
+                
+                <div class="main__container-rol rol">
+                    <p>Marcas</p>
+                    <div class="main__bluebox"><img src="images/registro-assets/id.svg" alt="rol-registro"
+                            id="main__register-rol"></div>
+                    <div class="main__register">
+                        <select name="registroRol" id="registroRol">
+                            <option value="intel" selected>Intel</option>
+                            <option value="amd">AMD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="main__container-name ">
+                    <p>Nombre</p>
+                    <div class="main__bluebox"><img src="images/registro-assets/name.svg" alt="nombre-registro"
+                            id="main__-name"></div>
+                    <div class="main__register">
+                        <input type="text" name="registroNombre" id="registroNombre" placeholder=""
+                            class="main__register-name" required oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                </div>
+
+
+                <div class="main__container-surname ">
+                    <p>Descripción</p>
+                    <div class="main__bluebox"><img src="images/registro-assets/surname.svg" alt="apellido-registro"
+                            id="main__register-surname"></div>
+                    <div class="main__register">
+                        <input type="text" name="registroApellido" id="registroApellido" placeholder=""
+                            class="main__register-surname" required oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                </div>
+
+                <div class="main__container-user ">
+                    <p>Descripción ampliada</p>
+                    <div class="main__bluebox"><img src="images/registro-assets/surname.svg" alt="usuario-registro"
+                            id="main__register-user"></div>
+                    <div class="main__register">
+                        <input type="text" name="registroUsuario" id="registroUsuario" placeholder=""
+                            class="main__register-user" required oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                </div>
+
+
+                <div class="main__container-email ">
+                    <p>Precio</p>
+                    <div class="main__bluebox"><img src="images/productAdd-assets/money-bill-solid.svg" alt="email-registro"
+                            id="main__register-email"></div>
+                    <div class="main__register">
+                        <input type="number" name="registroEmail" id="registroEmail" placeholder=""
+                            class="main__register-email" required oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                </div>
+
+
+                <div class="main__container-lock ">
+                    <p>Stock</p>
+                    <div class="main__bluebox"><img src="images/productAdd-assets/stack-overflow-brands.svg" alt="contraseña-registro"
+                            id="main__register-lock"></div>
+                    <div class="main__register">
+                        <input type="text" name="registroLock" id="registroLock" placeholder=""
+                            class="main__register-lock" required oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                </div>
+
+
+                
+                <div class="main__container-avatar avatar">
+                    <p>Imagen 1</p>
+                    <div class="main__bluebox"><img src="images/productAdd-assets/file-image-solid.svg" alt="avatar-registro"
+                            id="main__register-avatar"></div>
+                    <div class="main__register">
+                        <input type="file" name="registroAvatar" id="registroAvatar" placeholder="Foto producto"
+                            class="main__register-avatar" oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                </div>
+
+                <div class="main__container-avatar avatar">
+                    <p>Imagen 2</p>
+                    <div class="main__bluebox"><img src="images/productAdd-assets/file-image-solid.svg" alt="avatar-registro"
+                            id="main__register-avatar"></div>
+                    <div class="main__register">
+                        <input type="file" name="registroAvatar" id="registroAvatar" placeholder="Foto producto"
+                            class="main__register-avatar" oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                </div>
+
+                <div class="main__container-avatar avatar">
+                    <p>Imagen 3</p>
+                    <div class="main__bluebox"><img src="images/productAdd-assets/file-image-solid.svg" alt="avatar-registro"
+                            id="main__register-avatar"></div>
+                    <div class="main__register">
+                        <input type="file" name="registroAvatar" id="registroAvatar" placeholder="Foto producto"
+                            class="main__register-avatar" oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                </div>
+
+                <div class="main__container-avatar avatar">
+                    <p>Imagen 4</p>
+                    <div class="main__bluebox"><img src="images/productAdd-assets/file-image-solid.svg" alt="avatar-registro"
+                            id="main__register-avatar"></div>
+                    <div class="main__register">
+                        <input type="file" name="registroAvatar" id="registroAvatar" placeholder="Foto producto"
+                            class="main__register-avatar" oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                </div>
+
+                <div class="main__container-avatar avatar">
+                    <p>Imagen 5</p>
+                    <div class="main__bluebox"><img src="images/productAdd-assets/file-image-solid.svg" alt="avatar-registro"
+                            id="main__register-avatar"></div>
+                    <div class="main__register">
+                        <input type="file" name="registroAvatar" id="registroAvatar" placeholder="Foto producto"
+                            class="main__register-avatar" oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                </div>
+
+                <div class="main__container-rol rol">
+                    <p>Visibilidad</p>
+                    <div class="main__bluebox"><img src="images/productAdd-assets/eye-slash-regular.svg" alt="rol-registro"
+                            id="main__register-rol"></div>
+                    <div class="main__register">
+                        <select name="registroRol" id="registroRol">
+                            <option value="activo" selected>Activo</option>
+                            <option value="inactivo">Inactivo</option>
+                        </select>
+                    </div>
+                </div>
+
+                
+                <div class="main__container-rol rol">
+                    <p>Destacado en Home</p>
+                    <div class="main__bluebox"><img src="images/productAdd-assets/star-regular.svg" alt="rol-registro"
+                            id="main__register-rol"></div>
+                    <div class="main__register">
+                        <select name="registroRol" id="registroRol">
+                            <option value="destacado-si" selected>Si</option>
+                            <option value="destacado-no">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" id="main__register-submit">Agregar</button>
+
+            </form>
+        </section>
+    </main>
+    <!-- FIN MAIN (SLIDER, PRODUCTOS DESTACADOS, MAPS) -->
+
+
+
+
+    <!-- footer-->
+    <%- include("../partials/footer.ejs") %> 
+    <!-- fin footer-->
+</body>
+
+</html>
