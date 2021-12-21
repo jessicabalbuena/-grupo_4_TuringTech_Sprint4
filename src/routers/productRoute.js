@@ -1,5 +1,7 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express'),
+      router = express.Router(),
+      multer = require("multer"),
+      {body} = require("express-validator");
 // Solicito todas las funcionalidades del productController
 const productController = require('../controllers/productController');
 

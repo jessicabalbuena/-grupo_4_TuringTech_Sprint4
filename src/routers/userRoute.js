@@ -1,6 +1,8 @@
-const express = require('express');
-const router = express.Router();
-// Solicito todas las funcionalidades del productController
+const express = require('express'),
+      router = express.Router(),
+      multer = require("multer"),
+      {body} = require("express-validator");
+// Solicito todas las funcionalidades del userController
 const userController = require('../controllers/userController');
 
 /* Con readAll - LISTADO DE PRODUCTOS, RENDERIZA CATALOGO DE PRODUCTOS*/

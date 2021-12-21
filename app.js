@@ -2,8 +2,6 @@
 const express = require("express"),
       path = require("path"),
       app = express(),
-      multer = require("multer"),
-      {body} = require("express-validator"),
       methodOverride = require("method-override");
 
 //Requires de rutas
