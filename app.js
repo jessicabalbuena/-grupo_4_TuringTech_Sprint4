@@ -17,6 +17,13 @@ app.use(express.static(path.resolve(__dirname, "./public")));
 app.set("view engine", "ejs")
 app.set('views', path.resolve(__dirname, './src/views'));
 
+//Métodos "use" para la captura de datos enviados a través del body de un formulario
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+
+//Método "override" para la correcta inserción de los procesamientos "put" y "delete"
+app.use(methodOverride("_method"))
+
 //Servidor ejecutandose
 app.listen(process.env.PORT || 3000, () => {
     console.log("Servidor prendido");
