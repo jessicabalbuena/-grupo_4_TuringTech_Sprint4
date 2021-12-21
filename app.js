@@ -11,7 +11,7 @@ app.set("view engine", "ejs")
 app.set('views', path.resolve(__dirname, './src/views'));
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log("Servidor de maquetado corriendo");
+    console.log("Servidor prendido");
 })
 
 app.use("/", productRutas)
