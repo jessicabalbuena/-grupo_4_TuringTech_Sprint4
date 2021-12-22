@@ -14,7 +14,7 @@
 
             <h2 class="main__title">Por favor, ingrese sus respectivos datos para validarlo en el sistema</h2>
 
-            <form action="#" method="post">
+            <form action="/register" method="post" enctype="multipart/form-data">
                 <div class="main__container-name nombre">
                     <div class="main__bluebox"><img src="images/registro-assets/name.svg" alt="nombre-registro"
                             id="main__register-name"></div>
@@ -43,7 +43,7 @@
                     <div class="main__bluebox"><img src="images/registro-assets/email.svg" alt="email-registro"
                             id="main__register-email"></div>
                     <div class="main__register">
-                        <input type="text" name="registroEmail" id="registroEmail" placeholder="Email"
+                        <input type="email" name="registroEmail" id="registroEmail" placeholder="Email"
                             class="main__register-email" required oninvalid="this.setCustomValidity(' ')">
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                     <div class="main__bluebox"><img src="images/registro-assets/unlock.svg" alt="contraseña-registro"
                             id="main__register-lock"></div>
                     <div class="main__register">
-                        <input type="text" name="registroLock" id="registroLock" placeholder="Contraseña"
+                        <input type="password" name="registroLock" id="registroLock" placeholder="Contraseña"
                             class="main__register-lock" required oninvalid="this.setCustomValidity(' ')">
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                     <div class="main__bluebox"><img src="images/registro-assets/lock.svg"
                             alt="repetir-contraseña-registro" id="main__register-lockRepeat"></div>
                     <div class="main__register">
-                        <input type="text" name="registroLockRepeat" id="registroLockRepeat"
+                        <input type="password" name="registroLockRepeat" id="registroLockRepeat"
                             placeholder="Repetir Contraseña" class="main__register-lockRepeat" required
                             oninvalid="this.setCustomValidity(' ')">
                     </div>

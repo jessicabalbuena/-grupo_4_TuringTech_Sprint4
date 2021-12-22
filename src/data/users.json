@@ -1,0 +1,35 @@
+[
+ {
+  "id": 1,
+  "userNombre": "Sergio Gabriel",
+  "userApellido": "Maqueda",
+  "userUsuario": "gabriel-mq",
+  "userEmail": "gabrielmakedas@gmail.com",
+  "userLock": "contrasenia",
+  "userLockRepeat": "contrasenia",
+  "userAvatar": "default-image.png",
+  "userRol": "Vendedor"
+ },
+ {
+  "userNombre": "Fulanito",
+  "userApellido": "Meganito",
+  "userUsuario": "Fulamenga69",
+  "userEmail": "fulamenga@gmail.com",
+  "userLock": "fula123",
+  "userLockRepeat": "fula123",
+  "userAvatar": "default-image.png",
+  "userRol": "Comprador",
+  "id": 2
+ },
+ {
+  "userNombre": "Menganito",
+  "userApellido": "Fulanito",
+  "userUsuario": "mengafula69",
+  "userEmail": "mengafula@gmail.com",
+  "userLock": "menga123",
+  "userLockRepeat": "menga123",
+  "userAvatar": "userImage-1640198939597.jpg",
+  "userRol": "Vendedor",
+  "id": 3
+ }
+]

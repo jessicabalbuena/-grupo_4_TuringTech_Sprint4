@@ -72,9 +72,18 @@ const modelController = function (name) {
 
         // Elimino el registro en el archivo según un id    
         delete: function (id) {
-
             //console.log('Elimino :' + id)
             let rows = this.readFile();
+
+            //Recorro todas las filas y elimino el archivo-imágen del usuario que coincida con el id del mismo
+            /* rows.forEach(row => {
+                if(row.id == id){
+                    if(row.userAvatar && row.userAvatar !== "default-image.png"){
+                        fs.unlinkSync(path.resolve(__dirname, `../../public/images/users-assets/${row.userAvatar}`))
+                    }
+                }
+            }); */
+
             let updatedRows = rows.filter(row => {
                 return row.id != id;
             });
