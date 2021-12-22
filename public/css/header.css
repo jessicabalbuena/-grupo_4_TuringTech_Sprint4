@@ -155,4 +155,11 @@
     .nav__ul{
         display:none;
     }
+    /*Todos los "a"*/
+    a{
+        cursor: none;
+    }
+    img {
+        cursor:none
+    }
 }

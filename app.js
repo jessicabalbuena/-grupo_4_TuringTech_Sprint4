@@ -8,6 +8,8 @@ const express = require("express"),
 const productRutas = require("./src/routers/productRoute"),
       usersRutas = require("./src/routers/userRoute");
 
+//Require middlewares globales
+
 //Carpeta estática de archivos públicos (imágenes,css, etc.)
 app.use(express.static(path.resolve(__dirname, "./public")));
 
@@ -26,6 +28,8 @@ app.use(methodOverride("_method"))
 app.listen(process.env.PORT || 3000, () => {
     console.log("Servidor prendido");
 })
+
+//Uso middlewares Globales
 
 //Uso de rutas requeridas
 app.use("/", productRutas)
