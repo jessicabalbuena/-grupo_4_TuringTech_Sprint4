@@ -11,7 +11,6 @@
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
-        padding-bottom:4rem;
         border:3px solid var(--negro-intenso);
     }
     
@@ -28,7 +27,9 @@
         padding:2.5rem;
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
     
     .main__container-name,.main__container-surname,.main__container-user,.main__container-email,.main__container-lock,.main__container-lockRepeat,.main__container-avatar,.main__container-rol{
@@ -50,27 +51,27 @@
     }
     
     .nombre::after{
-        content: "El nombre no puede contener números ni caracteres que no sean letras.";
+        content: "El nombre no puede contener números ni caracteres que no sean letras. Ni contener el campo vacío";
     }
 
     .apellido::after{
-        content: "El apellido no puede contener números ni caracteres que no sean letras.";
+        content: "El apellido no puede contener números ni caracteres que no sean letras. Ni contener el campo vacío";
     }
     
     .usuario::after{
-        content: "Su nombre de usuario solamente puede contener caracteres alfanuméricos.";
+        content: "Su nombre de usuario solamente puede contener caracteres alfanuméricos. Ni contener el campo vacío";
     }
     
     .email::after{
-        content: "Su email solamente puede contener caracteres alfanuméricos, guiones medio, guiones bajos y un arroba como intermediario.";
+        content: "Su email solamente puede contener caracteres alfanuméricos, guiones medio, guiones bajos y un @ como intermediario. Ni contener el campo vacío";
     }
     
     .contrasenia::after{
-        content: "Su contraseña obligatoriamente debe contener al menos una letra mayúscula, un número y cualquier tipo de guión.";
+        content: "Su contraseña obligatoriamente no puede estar vacía, debe contener al menos una letra mayúscula, un número y cualquier tipo de guión.";
     }
     
     .contraseniarepeat::after{
-        content: "La contraseña de confirmación ingresada no coincide.";
+        content: "La contraseña de confirmación ingresada no coincide o es inexistente.";
     }
     
     .main__bluebox{
@@ -98,7 +99,7 @@
         border:1px solid var(--negro-intenso);
         width: 100%;
         height: 4rem;
-        margin-left:4.6rem;
+        /* margin-left:4.6rem; */
         overflow: hidden;
         z-index: 10;
     }
@@ -232,7 +233,7 @@
         display: flex;
         align-items: center;
         justify-content:center;
-        margin-left:-2.5rem;
+        /* margin-left:-2.5rem; */
     }
 
     .main__bluebox img{

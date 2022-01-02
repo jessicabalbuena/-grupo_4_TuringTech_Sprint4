@@ -15,56 +15,56 @@
             <h2 class="main__title">Por favor, ingrese sus respectivos datos para validarlo en el sistema</h2>
 
             <form action="/register" method="post" enctype="multipart/form-data">
-                <div class="main__container-name nombre">
+                <div class="main__container-name <%= locals.errors && errors.registroNombre ? "nombre" : null %>">
                     <div class="main__bluebox"><img src="images/registro-assets/name.svg" alt="nombre-registro"
                             id="main__register-name"></div>
                     <div class="main__register">
                         <input type="text" name="registroNombre" id="registroNombre" placeholder="Nombre"
-                            class="main__register-name" required oninvalid="this.setCustomValidity(' ')">
+                            class="main__register-name" value="<%= locals.old && old.registroNombre ? old.registroNombre : "" %>" oninvalid="this.setCustomValidity(' ')">
                     </div>
                 </div>
-                <div class="main__container-surname apellido">
+                <div class="main__container-surname <%= locals.errors && errors.registroApellido ? "apellido" : null %>">
                     <div class="main__bluebox"><img src="images/registro-assets/surname.svg" alt="apellido-registro"
                             id="main__register-surname"></div>
                     <div class="main__register">
                         <input type="text" name="registroApellido" id="registroApellido" placeholder="Apellido"
-                            class="main__register-surname" required oninvalid="this.setCustomValidity(' ')">
+                            class="main__register-surname" value="<%= locals.old && old.registroApellido ? old.registroApellido : "" %>" oninvalid="this.setCustomValidity(' ')">
                     </div>
                 </div>
-                <div class="main__container-user usuario">
+                <div class="main__container-user <%= locals.errors && errors.registroUsuario ? "usuario" : null %>">
                     <div class="main__bluebox"><img src="images/registro-assets/user.svg" alt="usuario-registro"
                             id="main__register-user"></div>
                     <div class="main__register">
                         <input type="text" name="registroUsuario" id="registroUsuario" placeholder="Usuario"
-                            class="main__register-user" required oninvalid="this.setCustomValidity(' ')">
+                            class="main__register-user" <%= locals.old && old.registroUsuario ? old.registroUsuario : "" %>  oninvalid="this.setCustomValidity(' ')">
                     </div>
                 </div>
-                <div class="main__container-email email">
+                <div class="main__container-email <%= locals.errors && errors.registroEmail ? "email" : null %>">
                     <div class="main__bluebox"><img src="images/registro-assets/email.svg" alt="email-registro"
                             id="main__register-email"></div>
                     <div class="main__register">
                         <input type="email" name="registroEmail" id="registroEmail" placeholder="Email"
-                            class="main__register-email" required oninvalid="this.setCustomValidity(' ')">
+                            class="main__register-email" value="<%= locals.old && old.registroEmail ? old.registroEmail : "" %> "   oninvalid="this.setCustomValidity(' ')">
                     </div>
                 </div>
-                <div class="main__container-lock contrasenia">
+                <div class="main__container-lock <%= locals.errors && errors.registroLock ? "contrasenia" : null %>">
                     <div class="main__bluebox"><img src="images/registro-assets/unlock.svg" alt="contraseña-registro"
                             id="main__register-lock"></div>
                     <div class="main__register">
                         <input type="password" name="registroLock" id="registroLock" placeholder="Contraseña"
-                            class="main__register-lock" required oninvalid="this.setCustomValidity(' ')">
+                            class="main__register-lock" oninvalid="this.setCustomValidity(' ')">
                     </div>
                 </div>
-                <div class="main__container-lockRepeat contraseniarepeat">
+                <div class="main__container-lockRepeat <%= locals.errors && errors.registroLockRepeat ? "contraseniarepeat" : null %>">
                     <div class="main__bluebox"><img src="images/registro-assets/lock.svg"
                             alt="repetir-contraseña-registro" id="main__register-lockRepeat"></div>
                     <div class="main__register">
                         <input type="password" name="registroLockRepeat" id="registroLockRepeat"
-                            placeholder="Repetir Contraseña" class="main__register-lockRepeat" required
+                            placeholder="Repetir Contraseña" class="main__register-lockRepeat"
                             oninvalid="this.setCustomValidity(' ')">
                     </div>
                 </div>
-                <div class="main__container-avatar avatar">
+                <div class="main__container-avatar">
                     <div class="main__bluebox"><img src="images/registro-assets/avatar.svg" alt="avatar-registro"
                             id="main__register-avatar"></div>
                     <div class="main__register">
@@ -72,7 +72,7 @@
                             class="main__register-avatar" oninvalid="this.setCustomValidity(' ')">
                     </div>
                 </div>
-                <div class="main__container-rol rol">
+                <div class="main__container-rol">
                     <div class="main__bluebox"><img src="images/registro-assets/id.svg" alt="rol-registro"
                             id="main__register-rol"></div>
                     <div class="main__register">

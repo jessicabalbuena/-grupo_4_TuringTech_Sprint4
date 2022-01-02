@@ -11,25 +11,14 @@
   "userRol": "Vendedor"
  },
  {
-  "userNombre": "Fulanito",
-  "userApellido": "Meganito",
-  "userUsuario": "Fulamenga69",
-  "userEmail": "fulamenga@gmail.com",
-  "userLock": "fula123",
-  "userLockRepeat": "fula123",
+  "userNombre": "Diego",
+  "userApellido": "Hidalgo",
+  "userUsuario": "dieh",
+  "userEmail": "dieh@gmail.com",
+  "userLock": "die123",
+  "userLockRepeat": "die123",
   "userAvatar": "default-image.png",
   "userRol": "Comprador",
   "id": 2
- },
- {
-  "userNombre": "Menganito",
-  "userApellido": "Fulanito",
-  "userUsuario": "mengafula69",
-  "userEmail": "mengafula@gmail.com",
-  "userLock": "menga123",
-  "userLockRepeat": "menga123",
-  "userAvatar": "userImage-1640198939597.jpg",
-  "userRol": "Vendedor",
-  "id": 3
  }
 ]

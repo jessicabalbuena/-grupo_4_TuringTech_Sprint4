@@ -1,5 +1,6 @@
-const jsonDB = require("../model/jsonDatabase")
-const modelController = jsonDB("users")
+const jsonDB = require("../model/jsonDatabase"),
+      modelController = jsonDB("users"),
+      {validationResult} = require("express-validator");
 
 const userController = {
     ayuda: (req,res) => {
@@ -12,6 +13,7 @@ const userController = {
         res.render("users/register")
     },
     registerPost:(req,res) => {
+        //Imágen y carga de datos
         let image;
 
         if(req.file){
@@ -31,9 +33,19 @@ const userController = {
             userRol:req.body.registroRol
         }
 
-        const registerUser = modelController.create(user)
+        //Validaciones correspondientes
+        let errors = validationResult(req)
+        if(errors.isEmpty()){
+            const registerUser = modelController.create(user)
 
-        res.redirect("/")
+            res.redirect("/")
+        }else{
+            res.render("users/register", {
+                errors:errors.mapped(),
+                old: req.body
+            })
+        }
+        console.log(errors);
     },
     restablecer: (req,res) => {
         res.render("users/restablecer")
