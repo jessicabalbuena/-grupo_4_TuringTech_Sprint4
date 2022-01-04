@@ -89,11 +89,11 @@
                 </div>
 
                 
-                    <% products.forEach(producto => { %>
+                    <% products.forEach(product => { %>
                         <div class="product1">
-                        <div class="imagen"><a href="/productDetail/<%=producto.id%>"><img src="<%=producto.productImage1%>" alt=""></a></div>
-                        <div class="descripcion"><p><%=producto.productName%></p></div>
-                        <div class="precio"><p><%=producto.productPrice%></p></div>
+                        <div class="imagen"><a href="/productDetail/<%=product.id%>"><img src="/images/<%=product.ruta%>" alt="<%= product.productImage1 %> "></a></div>
+                        <div class="descripcion"><p><%=product.productName%></p></div>
+                        <div class="precio"><p><%=product.productPrice%></p></div>
                         <div class="boton-productos"><input type="button" value="SUMAR AL CARRITO"></div>
                     </div>
                     <%}) 

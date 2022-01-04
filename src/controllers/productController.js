@@ -1,5 +1,6 @@
 // ESTO SERIA EL GESTOR DEL MODELO
 const jsonDB = require('../model/jsonDatabase');
+const path = require("path")
 
 // Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
 const productModel = jsonDB('products');
@@ -26,6 +27,8 @@ const productController = {
         res.render("products/productAdd")
     },
     productAddPost: (req,res) => {
+        let sliced = req.file.path.slice(req.file.path.indexOf("productos-assets"), req.file.path.length)
+
         const product = {
 			productCategory: req.body.productCategory,
 			productBrand: req.body.productBrand,
@@ -34,10 +37,13 @@ const productController = {
 			productDescriptionLong: req.body.productDescriptionLong,
 			productPrice: req.body.productPrice,
 			productStock: req.body.productStock,
-			//productImage1: req.file.filename,
+			productImage1: req.file.filename,
 			productVisibility: req.body.productVisibility,
-			productImportant: req.body.productImportant
+			productImportant: req.body.productImportant,
+            ruta: sliced
 		}
+
+        console.log(product.ruta);
 
 		const productCreate = productModel.create(product)
 
@@ -46,7 +52,7 @@ const productController = {
     productEdit: (req,res) => {
         const productEdit = productModel.find(req.params.id)
 
-		res.render("productEdit",{productEdit})
+		res.render("products/productEdit",{productEdit})
     },
     productPut: (req,res) => {
         const product = productModel.find(req.params.id)
@@ -71,6 +77,8 @@ const productController = {
     },
     productDelete: (req,res) => {
         const productDestroy = productModel.delete(req.params.id)
+
+        res.redirect("/products")
     }
 }
 

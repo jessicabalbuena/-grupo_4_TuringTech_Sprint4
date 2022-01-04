@@ -24,8 +24,8 @@ const modelController = function (name) {
         nextId: function () {
             let rows = this.readFile();
             let lastRow = rows.pop();
-
-            return lastRow.id ? ++lastRow.id : 1;
+            
+            return lastRow ? ++lastRow.id : 1
         },
         // Leo todos los registros del archivo
         all: function () {
@@ -75,14 +75,14 @@ const modelController = function (name) {
             //console.log('Elimino :' + id)
             let rows = this.readFile();
 
-            //Recorro todas las filas y elimino el archivo-imágen del usuario que coincida con el id del mismo
-            /* rows.forEach(row => {
+            //Recorro todas las filas y elimino el archivo-imágen del producto que coincida con el id del mismo
+            rows.forEach(row => {
                 if(row.id == id){
-                    if(row.userAvatar && row.userAvatar !== "default-image.png"){
-                        fs.unlinkSync(path.resolve(__dirname, `../../public/images/users-assets/${row.userAvatar}`))
+                    if(row.productImage1){
+                        fs.unlinkSync(path.resolve(__dirname, `../../public/images/${row.ruta}`))
                     }
                 }
-            }); */
+            });
 
             let updatedRows = rows.filter(row => {
                 return row.id != id;

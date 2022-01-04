@@ -16,7 +16,7 @@ router.get('/index', productController.index);
 
 //Creación de nuevo producto
 router.get('/productAdd', productController.productAddGet);
-router.post('/productAdd',uploadProducts.single("productImage1") ,productController.productAddPost);
+router.post('/productAdd/create',uploadProducts.single("productImage1") ,productController.productAddPost);
 
 //Detalle de producto
 router.get('/productDetail/:id', productController.productDetail);
@@ -28,11 +28,11 @@ router.get('/productCart', productController.productCart);
 router.get('/products', productController.productos);
 
 //Edición de producto
-router.get('/productEdit/edit/:id', productController.productEdit);
-router.put("/productEdit/edit/:id", productController.productPut)
+router.get('/productEdit/:id', productController.productEdit);
+router.put("/productEdit/:id", productController.productPut)
 
 //Borrado de producto
-router.delete("/:id", productController.productDelete)
+router.delete("/productDetail/:id", productController.productDelete)
 
 /* Con readDetail - LEE PRODUCTO SEGUN ID */
 //router.get('/detalle/:menuId', productController.readDetail);

@@ -1,93 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    
-    <%- include("../partials/head.ejs") %> 
-    
+
+<%- include("../partials/head.ejs") %>
+
     <body>
-        <%- include("../partials/header.ejs") %> 
-        
-    <main class="main-productDetail">
+        <%- include("../partials/header.ejs") %>
 
-        <section class="main__product-container">
-            <article class="main__product-imgs-container">
+            <main class="main-productDetail">
 
-                <img src="images/productos-assets/procesadores/ryzen7/ryzen1.png" alt="ryzen7" id="main__product-imgs-watch">
+                <section class="main__product-container">
+                    <article class="main__product-imgs-container">
 
-                <p class="main__product-imgs-title">Fotos del producto</p>
+                        <img src="/images/productos-assets/procesadores/ryzen7/ryzen1.png" alt="ryzen7"
+                            id="main__product-imgs-watch">
 
-                <div class="main__product-imgs">
-                    <img src="images/productos-assets/procesadores/ryzen7/ryzen1.png" alt="ryzen7" class="main__product-imgs-ryzen">
-                </div>
+                        <p class="main__product-imgs-title">Fotos del producto</p>
 
-            </article>
+                        <div class="main__product-imgs">
+                            <img src="/images/productos-assets/procesadores/ryzen7/ryzen1.png" alt="ryzen7"
+                                class="main__product-imgs-ryzen">
+                        </div>
 
-            <article class="main__product-info-container">
+                    </article>
 
-                <div class="main__product-info-head">
-                    <h1 class="main__product-head-title"> <%=productDetail.productName%> </h1>
-                    <p class="main__product-head-subtitle"></p>
-                </div>
+                    <article class="main__product-info-container">
 
-                <div class="main__product-info-body">
-                    <div class="main__product-price">
-                        <p class="main__product-price-title">$ 45.900</p>
-                        <p class="main__product-price-subtitle">Precio especial</p>
-                    </div>
-                    <div class="main__product-fees">
-                        <p class="main__product-fees-p">12 cuotas sin interés a:</p>
-                        <p class="main__product-fees-title">$ 54.643</p>
-                        <p class="main__product-fees-subtitle">Precio de lista</p>
-                    </div>
-                </div>
+                        <div class="main__product-info-head">
+                            <h1 class="main__product-head-title">
+                                <%= productDetail.productName %>
+                            </h1>
+                            <p class="main__product-head-subtitle"></p>
+                        </div>
 
-                <div class="main__product-info-footer">
-                    <div class="main__product-warranty-container">
-                        <img src="images/productDetail-assets/secure.svg" alt="Garantía" id="main__product-warranty-icon">
-                        <p class="main__product-warranty-title">Garantía - 36 meses</p>
-                    </div>
-                    <div class="main__product-stock-container">
-                        <img src="images/productDetail-assets/available.svg" alt="Stock disponible" id="main__product-stock-icon">
-                        <p class="main__product-stock-title">Stock disponible</p>
-                    </div>
-                    <div class="main__product-shipping-container">
-                        <img src="images/productDetail-assets/car.svg" alt="Envío disponible" id="main__product-shipping-icon">
-                        <p class="main__product-shipping-title">Envíos a todo el país</p>
-                    </div>
+                        <div class="main__product-info-body">
+                            <div class="main__product-price">
+                                <p class="main__product-price-title">$ 45.900</p>
+                                <p class="main__product-price-subtitle">Precio especial</p>
+                            </div>
+                            <div class="main__product-fees">
+                                <p class="main__product-fees-p">12 cuotas sin interés a:</p>
+                                <p class="main__product-fees-title">$ 54.643</p>
+                                <p class="main__product-fees-subtitle">Precio de lista</p>
+                            </div>
+                        </div>
 
-                    <div class="main__product-add-container">
-                        <button class="main__product-add-button" type="submit">Sumar al carrito</button>
-                    </div>
+                        <div class="main__product-info-footer">
+                            <div class="main__product-warranty-container">
+                                <img src="/images/productDetail-assets/secure.svg" alt="Garantía"
+                                    id="main__product-warranty-icon">
+                                <p class="main__product-warranty-title">Garantía - 36 meses</p>
+                            </div>
+                            <div class="main__product-stock-container">
+                                <img src="/images/productDetail-assets/available.svg" alt="Stock disponible"
+                                    id="main__product-stock-icon">
+                                <p class="main__product-stock-title">Stock disponible</p>
+                            </div>
+                            <div class="main__product-shipping-container">
+                                <img src="/images/productDetail-assets/car.svg" alt="Envío disponible"
+                                    id="main__product-shipping-icon">
+                                <p class="main__product-shipping-title">Envíos a todo el país</p>
+                            </div>
 
-                    <div class="main__product-edit-container">
-                        <button class="main__product-edit-button" type="button">Editar</button>
-                    </div>
+                            <div class="main__product-add-container">
+                                <button class="main__product-add-button" type="submit">Sumar al carrito</button>
+                            </div>
+                            <a href="/productEdit/<%= productDetail.id %> ">
+                                <div class="main__product-edit-container">
+                                    <button class="main__product-edit-button" type="button">Editar</button>
+                                </div>
+                            </a>
 
-                <form action="/products/delete/<%= productDetail.id %>?_method=DELETE " method="POST">
-                    <div class="main__product-delete-container">
-                        <button class="main__product-delete-button" type="button">  Borrar </button>
-                    </div>
-                </form>       
-                    
-                      
-                   
+                            <form action="/productDetail/<%= productDetail.id %>?_method=DELETE" method="POST">
+                                <div class="main__product-delete-container">
+                                    <button class="main__product-delete-button" type="submit"> Borrar </button>
+                                </div>
+                            </form>
 
-                </div>
+                        </div>
 
-            </article>
+                    </article>
 
-            <article class="main__product-specs-container">
+                    <article class="main__product-specs-container">
 
-                <h2 class="main__product-specs-title">ESPECIFICACIONES</h2>
-                <p> <%=productDetail.productDescriptionLong%> </p>
+                        <h2 class="main__product-specs-title">ESPECIFICACIONES</h2>
+                        <p>
+                            <%=productDetail.productDescriptionLong%>
+                        </p>
 
-            </article>
+                    </article>
 
-        </section>
+                </section>
 
-    </main>
+            </main>
 
-    <%- include("../partials/footer.ejs") %> 
+            <%- include("../partials/footer.ejs") %>
 
-</body>
+    </body>
+
 </html>
