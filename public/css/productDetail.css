@@ -17,9 +17,9 @@
 .main__product-imgs-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    height: 55rem;
     width:40%;
-    margin:-7rem 0 0 0;
 }
 
 #main__product-imgs-watch{
@@ -28,9 +28,11 @@
 }
 
 .main__product-imgs-title{
-    font-size: 2rem;
+    font-size: 4rem;
+    text-align: center;
     text-decoration: underline var(--violeta-fuego);
-    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.10rem;
 }
 
 .main__product-imgs{

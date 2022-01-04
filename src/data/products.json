@@ -1,30 +1,18 @@
 [
  {
+  "id": "1",
   "productCategory": "Procesadores",
-  "productBrand": "intel",
-  "productName": "PROCESADOR",
-  "productDescription": "11",
-  "productDescriptionLong": "1",
-  "productPrice": "1",
+  "productBrand": "amd",
+  "productName": "Producto Super AMD",
+  "productDescription": "AMD",
+  "productDescriptionLong": "AMDAMP",
+  "productPrice": "120",
   "productStock": "1",
-  "productImage1": "1641327341286-img-home-theater-sony.jpg",
+  "productFees": "8",
+  "productDiscount": "10",
+  "productImage1": "1641336257104-ryzen5.png",
   "productVisibility": "activo",
   "productImportant": "destacado-si",
-  "ruta": "productos-assets\\procesadores-intel\\1641327341286-img-home-theater-sony.jpg",
-  "id": 1
- },
- {
-  "productCategory": "PlacasVideo",
-  "productBrand": "intel",
-  "productName": "1123",
-  "productDescription": "12312",
-  "productDescriptionLong": "31231",
-  "productPrice": "31239",
-  "productStock": "12931",
-  "productImage1": "1641327518965-img-home-theater-sony.jpg",
-  "productVisibility": "activo",
-  "productImportant": "destacado-si",
-  "ruta": "productos-assets\\Placa-de-video\\1641327518965-img-home-theater-sony.jpg",
-  "id": 2
+  "ruta": "productos-assets\\procesadores-amd\\1641336257104-ryzen5.png"
  }
 ]

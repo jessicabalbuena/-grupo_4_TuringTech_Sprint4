@@ -57,6 +57,11 @@ const modelController = function (name) {
             let rows = this.readFile();
 
             let updatedRows = rows.map(oneRow => {
+                if(oneRow.id == row.id){
+                    if(oneRow.productImage1){
+                        fs.unlinkSync(path.resolve(__dirname, `../../public/images/${oneRow.ruta}`))
+                    }
+                }
                 if (oneRow.id == row.id) {
                     return row;
                 }

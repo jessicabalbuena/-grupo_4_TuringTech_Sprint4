@@ -11,10 +11,10 @@
 
             <section class="main__product-container">
                 <article class="main__product-imgs-container">
-    
-                    <img src="/images/<%=productDetail.ruta%>" alt="ryzen7" id="main__product-imgs-watch">
-    
+                    
                     <p class="main__product-imgs-title">Foto del producto</p>
+
+                    <img src="/images/<%=productDetail.ruta%>" alt="Producto" id="main__product-imgs-watch">
     
                     <!-- <div class="main__product-imgs">
                         <img src="">
@@ -35,8 +35,8 @@
                             <p class="main__product-price-subtitle">Precio especial</p>
                         </div>
                         <div class="main__product-fees">
-                            <p class="main__product-fees-p">12 cuotas sin interés a:</p>
-                            <p class="main__product-fees-title">$ <%=productDetail.productPrice%></p>
+                            <p class="main__product-fees-p"><%= productDetail.productFees %>  cuotas sin interés a:</p>
+                            <p class="main__product-fees-title">$<%= (productDetail.productPrice/productDetail.productFees).toFixed(2)%></p>
                             <p class="main__product-fees-subtitle">Precio de lista</p>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                         </div>
                         <div class="main__product-stock-container">
                             <img src="/images/productDetail-assets/available.svg" alt="Stock disponible" id="main__product-stock-icon">
-                            <p class="main__product-stock-title">Stock disponible</p>
+                            <p class="main__product-stock-title"><%= parseInt(productDetail.productStock) > 0 ? "Stock disponible" : "Stock No Disponible" %></p>
                         </div>
                         <div class="main__product-shipping-container">
                             <img src="/images/productDetail-assets/car.svg" alt="Envío disponible" id="main__product-shipping-icon">

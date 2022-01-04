@@ -37,6 +37,8 @@ const productController = {
 			productDescriptionLong: req.body.productDescriptionLong,
 			productPrice: req.body.productPrice,
 			productStock: req.body.productStock,
+			productFees: req.body.productFees,
+			productDiscount: req.body.productDiscount,
 			productImage1: req.file.filename,
 			productVisibility: req.body.productVisibility,
 			productImportant: req.body.productImportant,
@@ -56,6 +58,7 @@ const productController = {
     },
     productPut: (req,res) => {
         const product = productModel.find(req.params.id)
+        let sliced = req.file.path.slice(req.file.path.indexOf("productos-assets"), req.file.path.length)
 
 		let productUpdate = {
 			id: req.params.id,
@@ -66,14 +69,17 @@ const productController = {
 			productDescriptionLong: req.body.productDescriptionLong,
 			productPrice: req.body.productPrice,
 			productStock: req.body.productStock,
+            productFees: req.body.productFees,
+			productDiscount: req.body.productDiscount,
 			productImage1: req.file.filename,
 			productVisibility: req.body.productVisibility,
-			productImportant: req.body.productImportant
+			productImportant: req.body.productImportant,
+            ruta: sliced
 		   }
 
 		const productUpdated = productModel.update(productUpdate)	
 
-		res.redirect("/products")
+		res.redirect("/products/Procesadores")
     },
     productDelete: (req,res) => {
         const productDestroy = productModel.delete(req.params.id)

@@ -29,7 +29,7 @@ router.get('/products', productController.productos);
 
 //Edición de producto
 router.get('/productEdit/:id', productController.productEdit);
-router.put("/productEdit/:id", productController.productPut)
+router.put("/productEdit/:id", uploadProducts.single("productImage1"),productController.productPut)
 
 //Borrado de producto
 router.delete("/productDetail/:id", productController.productDelete)
