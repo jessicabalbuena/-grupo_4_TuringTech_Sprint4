@@ -11,20 +11,25 @@ router.get('/', productController.index);
 //Index
 router.get('/index', productController.index);
 
-//Carrito
-router.get('/productCart', productController.productCart);
+//Creación de nuevo producto
+router.get('/productAdd', productController.productAddGet);
+router.post('/productAdd', productController.productAddPost);
 
 //Detalle de producto
-router.get('/productDetail', productController.productDetail);
+router.get('/productDetail/:id', productController.productDetail);
+
+//Carrito
+router.get('/productCart', productController.productCart);
 
 //Catálogo de productos
 router.get('/products', productController.productos);
 
 //Edición de producto
-router.get('/productEdit', productController.productEdit);
+router.get('/productEdit/edit/:id', productController.productEdit);
+router.put("/productEdit/edit/:id", productController.productPut)
 
-//Creación de nuevo producto
-router.get('/productAdd', productController.productAdd);
+//Borrado de producto
+router.delete("/productEdit/:id", productController.productDelete)
 
 /* Con readDetail - LEE PRODUCTO SEGUN ID */
 //router.get('/detalle/:menuId', productController.readDetail);
