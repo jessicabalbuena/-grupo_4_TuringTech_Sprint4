@@ -62,12 +62,18 @@
 .cont-menu .cont-enlace .opcion{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.445);
     color: var(--marfil-agua);
     padding: 1.3rem 1rem;
     cursor: pointer;
     user-select: none;
     border: 1px solid var(--negro-intenso);
+}
+
+.opcion > p{
+    width: 100%;
+    margin-right:0.5rem;
 }
 
 .cont-menu .cont-enlace .opcion p{
@@ -79,8 +85,9 @@
     color: var(--violeta-fuego);
     font-weight: bold;
     font-size: 2.2rem;
+    height: 2.8rem;
     text-align: center;
-    width: 2.3rem;
+    width: 2.5rem;
     border-radius: 0.5rem;
 }
 

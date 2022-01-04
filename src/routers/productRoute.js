@@ -34,6 +34,10 @@ router.put("/productEdit/:id", productController.productPut)
 //Borrado de producto
 router.delete("/productDetail/:id", productController.productDelete)
 
+//Rutas de categorías de productos
+router.get("/products/:productCategory",productController.productCategory)
+
+
 /* Con readDetail - LEE PRODUCTO SEGUN ID */
 //router.get('/detalle/:menuId', productController.readDetail);
 

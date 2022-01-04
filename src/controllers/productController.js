@@ -47,7 +47,7 @@ const productController = {
 
 		const productCreate = productModel.create(product)
 
-		res.redirect("/products")
+		res.redirect(`/products/${req.body.productCategory}`)
     },
     productEdit: (req,res) => {
         const productEdit = productModel.find(req.params.id)
@@ -78,7 +78,21 @@ const productController = {
     productDelete: (req,res) => {
         const productDestroy = productModel.delete(req.params.id)
 
-        res.redirect("/products")
+        res.redirect("/products/Procesadores")
+    },
+    productCategory: (req,res) => {
+        const products = productModel.all()
+        let productsFiltered = []
+
+        for (let i = 0; i < products.length; i++) {
+            if(products[i].productCategory === req.params.productCategory){
+                productsFiltered.push(products[i])
+            }
+        }
+
+        console.log(productsFiltered);
+
+        res.render("products/productos",{productsFiltered})
     }
 }
 

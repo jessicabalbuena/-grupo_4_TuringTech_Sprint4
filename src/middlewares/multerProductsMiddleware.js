@@ -10,7 +10,7 @@ const storage = multer.diskStorage({
         if(req.body.productCategory === "Procesadores" && req.body.productBrand === "intel"){
             folder = path.resolve(__dirname, "../../public/images/productos-assets/procesadores-intel")
         }
-        if(req.body.productCategory === "Placas de video"){
+        if(req.body.productCategory === "PlacasVideo"){
             folder = path.resolve(__dirname, "../../public/images/productos-assets/Placa-de-video")
         }
         cb(null,folder)
