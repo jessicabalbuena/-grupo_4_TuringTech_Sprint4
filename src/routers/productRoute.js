@@ -5,6 +5,9 @@ const express = require('express'),
 // Solicito todas las funcionalidades del productController
 const productController = require('../controllers/productController');
 
+//Require de middlewares de ruta
+const uploadProducts = require("../middlewares/multerProductsMiddleware")
+
 /* Con readAll - LISTADO DE PRODUCTOS, RENDERIZA CATALOGO DE PRODUCTOS*/
 router.get('/', productController.index);
 
@@ -13,7 +16,7 @@ router.get('/index', productController.index);
 
 //Creación de nuevo producto
 router.get('/productAdd', productController.productAddGet);
-router.post('/productAdd', productController.productAddPost);
+router.post('/productAdd',uploadProducts.single("productImage1") ,productController.productAddPost);
 
 //Detalle de producto
 router.get('/productDetail/:id', productController.productDetail);
