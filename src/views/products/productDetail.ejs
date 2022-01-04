@@ -1,6 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 
+    
+    <%- include("../partials/head.ejs") %> 
+    
+    <body>
+        <%- include("../partials/header.ejs") %> 
+        
+    <main class="main-productDetail">
+
+        <section class="main__product-container">
+            <article class="main__product-imgs-container">
+
+                <img src="images/productos-assets/procesadores/ryzen7/ryzen1.png" alt="ryzen7" id="main__product-imgs-watch">
+
+                <p class="main__product-imgs-title">Fotos del producto</p>
+
+                <div class="main__product-imgs">
+                    <img src="images/productos-assets/procesadores/ryzen7/ryzen1.png" alt="ryzen7" class="main__product-imgs-ryzen">
+                </div>
+
+            </article>
+
+            <article class="main__product-info-container">
+
+                <div class="main__product-info-head">
+                    <h1 class="main__product-head-title"> <%=productDetail.productName%> </h1>
+                    <p class="main__product-head-subtitle"> <%=productDetail.productDescription%>  </p>
+                </div>
+
+                <div class="main__product-info-body">
+                    <div class="main__product-price">
+                        <p class="main__product-price-title">$ <%=productDetail.productPrice%> </p>
+                        <p class="main__product-price-subtitle">Precio especial</p>
+                    </div>
+                    <div class="main__product-fees">
+                        <p class="main__product-fees-p">12 cuotas sin interés a:</p>
+                        <p class="main__product-fees-title">$ <%=productDetail.productPrice%></p>
+                        <p class="main__product-fees-subtitle">Precio de lista</p>
+                    </div>
+                </div>
+
+                <div class="main__product-info-footer">
+                    <div class="main__product-warranty-container">
+                        <img src="images/productDetail-assets/secure.svg" alt="Garantía" id="main__product-warranty-icon">
+                        <p class="main__product-warranty-title">Garantía - 36 meses</p>
+                    </div>
+                    <div class="main__product-stock-container">
+                        <img src="images/productDetail-assets/available.svg" alt="Stock disponible" id="main__product-stock-icon">
+                        <p class="main__product-stock-title">Stock disponible</p>
+                    </div>
+                    <div class="main__product-shipping-container">
+                        <img src="images/productDetail-assets/car.svg" alt="Envío disponible" id="main__product-shipping-icon">
+                        <p class="main__product-shipping-title">Envíos a todo el país</p>
+                    </div>
 
 <%- include("../partials/head.ejs") %>
 
