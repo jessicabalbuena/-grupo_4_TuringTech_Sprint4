@@ -95,6 +95,33 @@
   font-size: 2.5rem;
 }
 
+.boton-iniciar:hover{
+  color:var(--blanco-agua);
+    text-shadow: 0 0 2px var(--violeta-fuego),
+    0 0 4px var(--violeta-fuego),
+    0 0 6px var(--violeta-fuego),
+    0 0 8px var(--violeta-fuego),
+    0 0 12px var(--violeta-fuego);
+}
+.button-contraseña{
+  background-color: rgba(0, 0, 0, 0.445);
+  color: var(--blanco-agua);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--negro-intenso);
+  font-size: 2.5rem;
+}
+
+.button-contraseña:hover{
+  color:var(--blanco-agua);
+    text-shadow: 0 0 2px var(--violeta-fuego),
+    0 0 4px var(--violeta-fuego),
+    0 0 6px var(--violeta-fuego),
+    0 0 8px var(--violeta-fuego),
+    0 0 12px var(--violeta-fuego);
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -104,7 +131,22 @@ a {
   color: var(--blanco-agua);
 }
 
-.registrate{
+.button-registrate{
+  background-color: rgba(0, 0, 0, 0.445);
+  color: var(--blanco-agua);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--negro-intenso);
+  font-size: 2.5rem;
+}
+.button-registrate:hover{
+  color:var(--blanco-agua);
+    text-shadow: 0 0 2px var(--violeta-fuego),
+    0 0 4px var(--violeta-fuego),
+    0 0 6px var(--violeta-fuego),
+    0 0 8px var(--violeta-fuego),
+    0 0 12px var(--violeta-fuego);
   
 }
 
