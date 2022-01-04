@@ -28,17 +28,17 @@
 
                 <div class="main__product-info-head">
                     <h1 class="main__product-head-title"> <%=productDetail.productName%> </h1>
-                    <p class="main__product-head-subtitle"></p>
+                    <p class="main__product-head-subtitle"> <%=productDetail.productDescription%>  </p>
                 </div>
 
                 <div class="main__product-info-body">
                     <div class="main__product-price">
-                        <p class="main__product-price-title">$ 45.900</p>
+                        <p class="main__product-price-title">$ <%=productDetail.productPrice%> </p>
                         <p class="main__product-price-subtitle">Precio especial</p>
                     </div>
                     <div class="main__product-fees">
                         <p class="main__product-fees-p">12 cuotas sin interés a:</p>
-                        <p class="main__product-fees-title">$ 54.643</p>
+                        <p class="main__product-fees-title">$ <%=productDetail.productPrice%></p>
                         <p class="main__product-fees-subtitle">Precio de lista</p>
                     </div>
                 </div>
