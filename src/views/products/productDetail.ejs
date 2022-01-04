@@ -19,9 +19,7 @@
 
                 <div class="main__product-imgs">
                     <img src="images/productos-assets/procesadores/ryzen7/ryzen1.png" alt="ryzen7" class="main__product-imgs-ryzen">
-                    <img src="images/productos-assets/procesadores/ryzen7/ryzen2.png" alt="ryzen7" class="main__product-imgs-ryzen">
-                    <img src="images/productos-assets/procesadores/ryzen7/ryzen3.png" alt="ryzen7" class="main__product-imgs-ryzen">
-                    <img src="images/productos-assets/procesadores/ryzen7/ryzen4.png" alt="ryzen7" class="main__product-imgs-ryzen">
+                    
                 </div>
 
             </article>
@@ -29,8 +27,8 @@
             <article class="main__product-info-container">
 
                 <div class="main__product-info-head">
-                    <h1 class="main__product-head-title">Procesador AMD RYZEN 7 3700X 4.4 GHz AM4 Wraith Prism RGB Led Coolerh</h1>
-                    <p class="main__product-head-subtitle">Procesadores y coolers cpus > Procesadores AMD > AMD</p>
+                    <h1 class="main__product-head-title"> <%=productDetail.productName%> </h1>
+                    <p class="main__product-head-subtitle"></p>
                 </div>
 
                 <div class="main__product-info-body">
@@ -67,9 +65,14 @@
                         <button class="main__product-edit-button" type="button">Editar</button>
                     </div>
 
+                <form action="/products/delete/<%= productDetail.id %>?_method=DELETE " method="POST">
                     <div class="main__product-delete-container">
-                        <button class="main__product-delete-button" type="button">Borrar</button>
+                        <button class="main__product-delete-button" type="button">  Borrar </button>
                     </div>
+                </form>       
+                    
+                      
+                   
 
                 </div>
 
@@ -78,32 +81,8 @@
             <article class="main__product-specs-container">
 
                 <h2 class="main__product-specs-title">ESPECIFICACIONES</h2>
-                
-                <div class="main__product-specs-characts-container">
-                    <h3 class="main__product-specs-characts-title">CARACTERÍSTICAS GENERALES</h3>
-                    <p class="main__product-specs-characts-info">Modelo <span class="main__product-specs-characts-span">RYZEN 7 3700X</span></p>
-                    <p class="main__product-specs-characts-info">Socket <span class="main__product-specs-characts-span">AM4 Ryzen 3th Gen</span></p>
-                    <p class="main__product-specs-characts-info">Núcleos <span class="main__product-specs-characts-span">8</span></p>
-                    <p class="main__product-specs-characts-info">Frecuencia <span class="main__product-specs-characts-span">3600.00 mhz</span></p>
-                    <p class="main__product-specs-characts-info">Proceso De Fabricación <span class="main__product-specs-characts-span">7 nm</span></p>
-                    <p class="main__product-specs-characts-info">Proceso De Fabricación <span class="main__product-specs-characts-span">7 nm</span></p>
-                    <p class="main__product-specs-characts-info">Chipset GPU <span class="main__product-specs-characts-span">No posee</span></p>
-                    <p class="main__product-specs-characts-info">Hilos <span class="main__product-specs-characts-span">16</span></p>
-                    <p class="main__product-specs-characts-info">Frecuencia turbo <span class="main__product-specs-characts-span">4400 mhz</span></p>
-                    <p class="main__product-specs-characts-info">Familia <span class="main__product-specs-characts-span">AMD RYZEN 7</span></p>
-                </div>
+                <p> <%=productDetail.productDescriptionLong%> </p>
 
-                <div class="main__product-specs-coolers-container">
-                    <h3 class="main__product-specs-coolers-title">COOLERS Y DISIPADORES</h3>
-                    <p class="main__product-specs-coolers-info">Tdp <span class="main__product-specs-coolers-span">65w</span></p>
-                    <p class="main__product-specs-coolers-info">Incluye Cooler Cpu <span class="main__product-specs-coolers-span">Sí</span></p>
-                </div>
-
-                <div class="main__product-specs-memory-container">
-                    <h3 class="main__product-specs-memory-title">MEMORIA</h3>
-                    <p class="main__product-specs-memory-info">L2 <span class="main__product-specs-memory-span">4mb</span></p>
-                    <p class="main__product-specs-memory-info">L3 <span class="main__product-specs-memory-span">32mb</span></p>
-                </div>
             </article>
 
         </section>

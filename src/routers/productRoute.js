@@ -32,7 +32,7 @@ router.get('/productEdit/edit/:id', productController.productEdit);
 router.put("/productEdit/edit/:id", productController.productPut)
 
 //Borrado de producto
-router.delete("/productEdit/:id", productController.productDelete)
+router.delete("/:id", productController.productDelete)
 
 /* Con readDetail - LEE PRODUCTO SEGUN ID */
 //router.get('/detalle/:menuId', productController.readDetail);
