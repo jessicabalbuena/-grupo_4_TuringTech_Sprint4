@@ -23,6 +23,23 @@
     height: 100%;
 }
 
+
+#createProduct-submit{
+    background-color: var(--negro-intenso-transparente);
+    border:2px solid var(--negro-intenso);
+    border-radius: 5px;
+    
+    height: 3rem;
+    font-size: 1rem;
+    margin:1rem auto;
+    color:var(--blanco-agua);
+  }
+  
+  #createProduct-submit:hover{
+    cursor: pointer;
+    color:var(--violeta-fuego);
+  }
+
 .cont-menu{
     width: 20%;
     margin: 50px ;

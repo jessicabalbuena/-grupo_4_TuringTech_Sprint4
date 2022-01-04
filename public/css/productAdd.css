@@ -77,16 +77,45 @@
     font-size:1.5rem;
 }
 
-#registroRol{
+#productVisibility{
     font-size: 1.5rem;
     background-color: transparent;
 }
 
-#registroRol option{
+#productVisibility option{
     background-color: var(--negro-intenso-transparente);
 }
 
-#main__register-submit{
+#productImportant{
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+#productImportant option{
+    background-color: var(--negro-intenso-transparente);
+}
+
+#productCategory{
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+#productCategory option{
+    background-color: var(--negro-intenso-transparente);
+}
+
+
+#productBrand{
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+#productBrand option{
+    background-color: var(--negro-intenso-transparente);
+}
+
+
+#create-submit{
     background-color: var(--negro-intenso-transparente);
     border:2px solid var(--negro-intenso);
     border-radius: 5px;
@@ -95,12 +124,12 @@
     font-size: 4rem;
     margin:2rem auto;
     color:var(--blanco-agua);
-}
-
-#main__register-submit:hover{
+  }
+  
+  #create-submit:hover{
     cursor: pointer;
     color:var(--violeta-fuego);
-}
+  }
 
 /*móvil*/
 
