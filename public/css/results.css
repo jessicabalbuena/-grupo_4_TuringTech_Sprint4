@@ -29,5 +29,14 @@
 
 .main__search-product{
     display: inline-block;
+    text-align: center;
+    background-color: var(--negro-intenso-transparente);
+    padding:1rem;
+    width: 20rem;
+    border-radius: 1rem;
     margin-right: 2rem;
+}
+
+.main__search-product:hover{
+    box-shadow: 0 0 5px var(--violeta-fuego);
 }
