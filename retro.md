@@ -1,4 +1,4 @@
-# Retrospectiva:  ## ![image](https://user-images.githubusercontent.com/91677757/145304567-384e5aa3-71eb-4347-b4a9-14e36bbab6d4.png)
+# Retrospectiva:  ![image](https://user-images.githubusercontent.com/91677757/145304567-384e5aa3-71eb-4347-b4a9-14e36bbab6d4.png)
 
 
 
