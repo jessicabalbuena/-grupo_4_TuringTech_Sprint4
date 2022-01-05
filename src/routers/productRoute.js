@@ -37,6 +37,9 @@ router.delete("/productDetail/:id", productController.productDelete)
 //Rutas de categorías de productos
 router.get("/products/:productCategory",productController.productCategory)
 
+//Búsqueda/Barra de navegación
+router.get("/results",productController.search)
+
 
 /* Con readDetail - LEE PRODUCTO SEGUN ID */
 //router.get('/detalle/:menuId', productController.readDetail);

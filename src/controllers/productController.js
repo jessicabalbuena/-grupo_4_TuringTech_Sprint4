@@ -96,9 +96,22 @@ const productController = {
             }
         }
 
-        console.log(productsFiltered);
-
         res.render("products/productos",{productsFiltered})
+    },
+    search: (req,res) => {
+        let searched = req.query.search.toLowerCase()
+
+		const products = productModel.all()
+
+		let productsResults = []
+
+		for(let i = 0; i < products.length;i++){
+			if(products[i].productName.toLowerCase().includes(searched)){
+				productsResults.push(products[i])
+			}
+		}
+
+        res.render("products/results",{productsResults})
     }
 }
 
